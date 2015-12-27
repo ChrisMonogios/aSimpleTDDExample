@@ -5,10 +5,13 @@
             if (splittedTime[0] !== "12") {
                 splittedTime[0] = parseInt(splittedTime[0]) + 12; 
             }
+        } else {
+            if (splittedTime[0] === "12") {
+                splittedTime[0] = "00";
+            }
         }
         
         splittedTime[2] = splittedTime[2].replace(/\D/g, "");
         
         return splittedTime.join(":");
-
 }
